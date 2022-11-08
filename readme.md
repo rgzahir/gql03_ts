@@ -1,7 +1,7 @@
 #Objective
 
-###Testing the graphql in react-native using apollo client
-###Testing array methods using the json result from the graphql
+- Testing the graphql in react-native using apollo client
+- Testing array methods using the json result from the graphql
 
 ###Takes from rnd
 
