@@ -21,7 +21,8 @@ export const Spacex = () => {
     //   console.log(data);
   }
 
-  // const { launchesPast } = data;
+  // GET: THE DATA RETURNED IS ALL MATCHING DATA TO THE STRING PASSED
+  // USING FILTER METHOD OF ARRAY.PROTOTYPE METHOD
   const filteredData = FilterAllMatching(data, finder);
 
   // PLAN: to get data onloading screen and access specific data from the result
@@ -43,13 +44,22 @@ export const Spacex = () => {
       />
       <Button title="get spacex" onPress={() => getSpaceX()} />
 
+      {/* GET: WILL FIND THE FIRST ITEM THAT MATCHED THE STRING PASSED IN THE RESULT FROM GRAPHQL */}
       {data ? FindByMissionName(data, finder) : null}
 
+      {/* GET: THE DATA RETURNED IS ALL MATCHING DATA TO THE STRING PASSED
+          USING FILTER METHOD OF ARRAY.PROTOTYPE METHOD */}
       {filteredData && finder !== "" ? (
         filteredData.map((item, key) => {
           return (
-            <TouchableOpacity key={key} style={{ paddingLeft: 16 }}>
-              <Text>{item.mission_name}</Text>
+            <TouchableOpacity
+              key={key}
+              style={{ paddingLeft: 16, marginBottom: 4 }}
+            >
+              <Text>
+                mission:{" "}
+                <Text style={{ fontWeight: "600" }}> {item.mission_name}</Text>
+              </Text>
             </TouchableOpacity>
           );
         })
