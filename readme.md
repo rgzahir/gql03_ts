@@ -1,4 +1,4 @@
-#Objective
+#Objective - gql03_ts
 
 - Testing the graphql in react-native using apollo client
 - Testing array methods using the json result from the graphql
